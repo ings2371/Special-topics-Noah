@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 var usersRouter = require('./users')
-var songsRouter = require('./users')
+var cardsRouter = require('./Cards')
 
 router.use('/users', usersRouter)
-router.use('/songs', songsRouter)
+router.use('/cards', cardsRouter)
 
 
 router.get('/', function(req, res, next) {
