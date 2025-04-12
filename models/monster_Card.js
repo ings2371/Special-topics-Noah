@@ -32,7 +32,6 @@ const cardSchema = new mongoose.Schema({
             },
             DEF: {
                 type: Number,
-                require: true
             }
         },
         Number_Own: Number
