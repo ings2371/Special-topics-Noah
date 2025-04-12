@@ -17,6 +17,7 @@ mongoose.connect(process.env.MONGO_DB) //connects to online cluster
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/api/users');
 var cardsRouter = require('./routes/api/Cards')
+var cardsRouter = require('./routes/api/Cards')
 var apiRouter = require('./routes/api')
 
 //define express app
@@ -36,6 +37,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/api', apiRouter);//looks for folder
 app.use('/api', apiRouter);//looks for folder
 
 // catch 404 and forward to error handler
