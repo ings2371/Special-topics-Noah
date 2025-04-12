@@ -5,7 +5,7 @@ const cardSchema = new mongoose.Schema({
             type: String,
             require: true
         },
-        Atribute: {
+        Attribute: {
             type: String,
             require: true
         },
@@ -36,6 +36,6 @@ const cardSchema = new mongoose.Schema({
             }
         },
         Number_Own: Number
-}, {collation: 'Monster'})
+})
 
 module.exports = mongoose.model('Card', cardSchema);

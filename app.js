@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose')
 var dotenv = require('dotenv')
+var cors = require('cors')
+
 //load any variables form .env file
 dotenv.config()
 
@@ -26,6 +28,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');//setting templaye engine to jade
 
 //defining middleware
+app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
