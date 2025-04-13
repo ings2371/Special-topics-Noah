@@ -1,10 +1,11 @@
 const Card = ({card}) => {
     const {_id, Card_Name, Attribute, Type_of_card, LevelRankLink, Image, Types, Card_Text, Stats, Number_Own} = card
+    
     //the card text and background colors
 let cardStyle = {};
 if(Type_of_card === "Xyz"){
   cardStyle = {backgroundColor: "black", color:"white"}
-} else if (Type_of_card === "Monster"){
+} else if (Type_of_card === "Effect"){
   cardStyle = {backgroundColor: "#7B3F00", color:"black"}
 }else if (Type_of_card === "Synchro"){
   cardStyle = {backgroundColor: "white", color:"black"}
