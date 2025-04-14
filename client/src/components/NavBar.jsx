@@ -3,8 +3,8 @@ import React from 'react';
 
 const NavBar = () => {
     return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
+<nav className="navbar navbar-expand-lg navbar-dark bg-info">
+<div className="container">
         <a href="/#" className="navbar-brand d-flex align-items-center">
           <strong>YGO Card Collect</strong>
         </a>

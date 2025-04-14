@@ -4,17 +4,17 @@ import '../css/footer.css';
 
 const Footer = props => {
     return (
-      <footer className="text-muted bg-dark">
+<footer className="text-dark bg-info">
         <div className="container">
           <p className="float-right">
-            <Link to="/">Home</Link><br />
-            <Link to="/AddCard">Add Card</Link><br />
-            <Link to="/About">About</Link><br />
+            <Link to="/" style={{ color: 'white' }}>Home</Link><br />
+            <Link to="/AddCard" style={{ color: 'white' }}>Add Card</Link><br />
+            <Link to="/About" style={{ color: 'white' }}>About</Link><br />
 
             </p>
 
-          <p>Dear user, <br /> hey there!</p>
-          <p>If you think I should include any other <br />
+          <p style={{ color: 'black' }}>Dear user, <br /> hey there!<br/>
+          If you think I should include any other <br />
            features to this email me at noahings16@gmail.com</p>
         </div>
       </footer>
