@@ -30,9 +30,14 @@ const Main = () => {
   // Filter cards based on search query
   const filteredCards = cards.filter((card) => {
     // Check if any field contains the search query (case insensitive)
-    return (
-      card.Card_Name.toLowerCase().includes(search.toLowerCase())
-    );
+    const matchesSearch =
+    card.Card_Name.toLowerCase().includes(search.toLowerCase()) ||
+    card.Type_of_card.toLowerCase().includes(search.toLowerCase()) 
+
+    const matchesType = typeFilter === '' || card.Type_of_card === typeFilter;
+
+    return matchesSearch && matchesType;
+
   });
 
     return ( 
@@ -44,8 +49,26 @@ const Main = () => {
               <div className="input-group-append">
                 <button className="btn btn-secondary" type="button">
                   <i className="fa fa-search"></i>
-                </button>
+                </button>               
               </div>
+              <div className="input-group mt-3">
+
+                {/* drop down of Type of card */}
+              <select
+                className="form-control"
+                value={typeFilter}
+                onChange={(e) => setTypeFilter(e.target.value)}
+              >
+                <option value="">All Types</option>
+                <option value="Normal">Normal</option>
+                <option value="Effect">Effect</option>
+                <option value="Fusion">Fusion</option>
+                <option value="Link">Link</option>
+                <option value="Xyz">Xyz</option>
+                <option value="Synchro">Synchro</option>
+              </select>
+            </div>
+
             </div>
           </div>
         </section>
