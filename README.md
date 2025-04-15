@@ -20,6 +20,7 @@ GET - gets all the data
 GET/id - gets data by the id of whatever the data is
 
 post - post post things to the database(here's a example of how a item is added this way)
+
 {
   "Card_Name": "Gem-Knight pearl",
   "Attribute": "Earth",
